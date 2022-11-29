@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="%PUBLIC_URL%/01d.png" />
+    <link rel="icon" href="./img/bot_wink.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Weather WebApp</title>
 </head>
 <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+        <header class="header-weatherapp">
+            <h1>Welcome to the Weather App</h1>
+        </header>
+        <div class="box-wrap">
+            <div class="container-box">
+                <div class="search-container">
+                    <input id="city-input" type="text" placeholder="Enter a city name" value="madrid">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+
+            
+    </div>
+    <script src="api_key.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
