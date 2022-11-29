@@ -1,24 +1,28 @@
-let result = document.getElementById("result");
-let searchBtn = document.getElementById("search-btn"); 
-let cityRef = document.getElementById("city-input");
+const result = document.getElementById("result");
+const searchBtn = document.getElementById("search-btn"); 
+const cityRef = document.getElementById("city-input");
+const RegExpression = /^[a-zA-Z\s]*$/;
 
 const roundedNum = (data) => Math.round(data);
 
 const getWeather = () => {
     let cityValue = cityRef.value;
     //If input field is empty
-    if (cityValue.length == 0) {
+    if (cityValue.trim().length == 0 || !RegExpression.test(cityValue)) {
       result.innerHTML = `<div class="input-notvalid-wrapper"><h3 class="input-notvalid">Please enter a city name</h3></div>`;
     }
 
     //If input field is NOT empty
     else {
       let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${api_key}&units=metric`;
+
       //Clear the input field
-      cityRef.value = "";
+      cityRef.value = ""; // quitar el value inicial
       fetch(api_url)
         .then((resp) => resp.json())
         //If city name is valid
+
+        // evitar que muestre data inexistente --->> if(cityValue == data.name){ }
         .then((data) => {
           result.innerHTML = `
           <div class="flex-wrapper"> 
@@ -43,12 +47,12 @@ const getWeather = () => {
           `;
         })
         //If city name is NOT valid
+        // evitar que muestre data inexistente --->> if(cityValue == data.name){ }
         .catch(() => {
           result.innerHTML = `<h3 class="input-notvalid">City not found</h3>`;
         });
     }
   };
   searchBtn.addEventListener("click", getWeather);
-  window.addEventListener("load", getWeather);
-  
+  //window.addEventListener("load", (getWeather) => console.log("Page fully loaded"));
   

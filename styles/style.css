@@ -111,6 +111,7 @@ button {
 .feels-like {
     color: var(--font-color);
     font-size: 15px;
+    text-transform: uppercase;
 }
 
 .h2-cityName {
