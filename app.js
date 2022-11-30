@@ -1,6 +1,8 @@
 const result = document.getElementById("result");
 const searchBtn = document.getElementById("search-btn"); 
 const cityRef = document.getElementById("city-input");
+const forecastContainer = document.getElementById("forecast");
+
 const RegExpression = /^[a-zA-Z\s]*$/;
 
 const roundedNum = (data) => Math.round(data);
@@ -15,16 +17,21 @@ const getWeather = () => {
     //If input field is NOT empty
     else {
       let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${api_key}&units=metric`;
+      
 
       //Clear the input field
       cityRef.value = ""; // quitar el value inicial
-      fetch(api_url)
+    fetch(api_url)
         .then((resp) => resp.json())
         //If city name is valid
 
         // evitar que muestre data inexistente --->> if(cityValue == data.name){ }
         .then((data) => {
-          result.innerHTML = `
+        let forecast_url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${api_key}`;
+        fetch(forecast_url)
+        .then((response) => response.json())
+        .then((dataForecast) => {
+            result.innerHTML = `
           <div class="flex-wrapper"> 
           <div class="container-weather"> 
           <h2 class="h2-cityName">${data.name}</h2>
@@ -44,8 +51,19 @@ const getWeather = () => {
                   <h4 class="data-temp">${roundedNum(data.main.temp_max)}&#176;</h4>
               </div>
           </div>
+
+          
           `;
+
+          forecastContainer.innerHTML = `
+          <div>${dataForecast.list[0].visibility}</div>
+          `
         })
+        })
+
+
+
+          
         //If city name is NOT valid
         // evitar que muestre data inexistente --->> if(cityValue == data.name){ }
         .catch(() => {
@@ -56,3 +74,29 @@ const getWeather = () => {
   searchBtn.addEventListener("click", getWeather);
   //window.addEventListener("load", (getWeather) => console.log("Page fully loaded"));
   
+
+  /*
+  
+  const currentWeatherFetch = fetch(
+      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );  
+    
+    api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+
+    const forecastFetch = fetch(
+        `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+      );
+  
+      Promise.all([currentWeatherFetch, forecastFetch]) 
+        .then(async (response) => {
+          const weatherResponse = await response[0].json();  
+          const forecastResponse = await response[1].json();
+  
+          setCurrentWeather({ city: searchData.label, ...weatherResponse }); 
+          console.log("con puntos", { city: searchData.label, ...weatherResponse });
+          console.log("sin", { city: searchData.label, weatherResponse });
+          setForecast({ city: searchData.label, ...forecastResponse });
+        })
+        .catch((err) => console.log(err));
+        
+    */
