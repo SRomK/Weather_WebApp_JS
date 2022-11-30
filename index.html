@@ -12,27 +12,72 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Weather WebApp</title>
 </head>
-<body>
+<body onload="defaultScreen()">
     <div class="wrapper">
         <header class="header-weatherapp">
-            <h1>Welcome to the Weather App</h1>
+            <h1 class="title-header">Welcome to the Weather App</h1>
         </header>
         <div class="box-wrap">
             <div class="container-box">
                 <div class="search-container">
                     <input id="city-input" type="text" placeholder="Enter a city name">
-                    <button id="search-btn">Search</button>
+                    <button onclick="dayAppears()" id="search-btn">Search</button>
                 </div>
                 <div id="result"></div>
-
-
-                
             </div>
         </div>
-        
-        <div id="forecast"></div>
 
-            
+
+        <!--forecast-->
+        <div class="search-forecast-container">
+        <h1 id="h1-forecast"> 5 days weather forecast </h1>
+        </div>
+
+        <div id="forecast-container">
+            <div id="icons-container">
+                <div class="icons">
+                    <p class="weather" id="day1"></p>
+                    <div class="icon-img">
+                        <img src="./img/icons/01d.png" class="img-forecast" id="img1" alt="icon weather forecast">
+                    </div>
+                    <p class="minValues" id="day1Min">Loading...</p>
+                    <p class="maxValues" id="day1Max">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day2"></p>
+                    <div class="icon-img">
+                        <img src="./img/icons/01d.png" class="img-forecast" id="img2" alt="icon weather forecast">
+                    </div>
+                    <p class="minValues" id="day2Min">Loading...</p>
+                    <p class="maxValues" id="day2Max">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day3"></p>
+                    <div class="icon-img">
+                        <img src="./img/icons/01d.png" class="img-forecast" id="img3" alt="icon weather forecast">
+                    </div>
+                    <p class="minValues" id="day3Min">Loading...</p>
+                    <p class="maxValues" id="day3Max">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day4"></p>
+                    <div class="icon-img">
+                        <img src="./img/icons/01d.png" class="img-forecast" id="img4" alt="icon weather forecast">
+                    </div>
+                    <p class="minValues" id="day4Min">Loading...</p>
+                    <p class="maxValues" id="day4Max">Loading...</p>
+                </div>
+                <div class="icons">
+                    <p class="weather" id="day5"></p>
+                    <div class="icon-img">
+                        <img src="./img/icons/01d.png" class="img-forecast" id="img5" alt="icon weather forecast">
+                    </div>
+                    <p class="minValues" id="day5Min">Loading...</p>
+                    <p class="maxValues" id="day5Max">Loading...</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="api_key.js"></script>
     <script src="app.js"></script>

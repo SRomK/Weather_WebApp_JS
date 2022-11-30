@@ -49,7 +49,7 @@ body {
     margin-bottom: 5rem;
 }
 
-h1, h2 {
+.title-header {
     color: var(--font-color);
     font-size: 25px;
 }
@@ -110,8 +110,14 @@ button {
 .weather, 
 .feels-like {
     color: var(--font-color);
-    font-size: 15px;
+    font-size: 17px;
     text-transform: uppercase;
+}
+
+.humidity {
+    text-transform: capitalize;
+    color: var(--font-color);
+    font-size: 14px;
 }
 
 .h2-cityName {
@@ -162,3 +168,69 @@ button {
     font-weight: 300;
     color: var(--off-white);
 }
+
+
+/*forecast title*/
+
+#h1-forecast {
+    margin-top: 30px;
+    color: var(--font-color);
+    font-size: 25px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* forecast cards styles */
+
+.search-forecast-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icons-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons {
+    display: inline-block;
+    margin: 5px 2px 5px 10px;
+    width: 25em;
+    height: 14em;
+    background: var(--transp-white-2);
+    backdrop-filter: blur(10px);
+    padding: 3em 1.8em;
+    border: 2px solid var(--transp-white-2);
+    border-radius: 1.6em;
+    box-shadow: 0 1.8em 3.7em var(--shadow);
+    text-align: center;
+}
+
+.img-forecast {
+    width: 70px;
+    height: auto;
+}
+
+.minValues,
+.maxValues {
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0px 0px 5px 5px;
+}
+
+@media screen and (max-width: 880px) {
+    .wrapper {
+      font-size: 14px;
+    }
+    #icons-container {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+  }
