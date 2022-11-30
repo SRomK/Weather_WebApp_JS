@@ -74,29 +74,3 @@ const getWeather = () => {
   searchBtn.addEventListener("click", getWeather);
   //window.addEventListener("load", (getWeather) => console.log("Page fully loaded"));
   
-
-  /*
-  
-  const currentWeatherFetch = fetch(
-      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
-    );  
-    
-    api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-
-    const forecastFetch = fetch(
-        `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
-      );
-  
-      Promise.all([currentWeatherFetch, forecastFetch]) 
-        .then(async (response) => {
-          const weatherResponse = await response[0].json();  
-          const forecastResponse = await response[1].json();
-  
-          setCurrentWeather({ city: searchData.label, ...weatherResponse }); 
-          console.log("con puntos", { city: searchData.label, ...weatherResponse });
-          console.log("sin", { city: searchData.label, weatherResponse });
-          setForecast({ city: searchData.label, ...forecastResponse });
-        })
-        .catch((err) => console.log(err));
-        
-    */
