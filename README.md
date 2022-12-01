@@ -20,7 +20,7 @@ Created **img** folder for the favicon icon and inside a separate folder with th
 Created styles folder and inside it I created the specific **style.css** file with a universal selector with pseudo element specifications for the webapp window border-box specs, declared global variables to use within the css file and all the corresponding styles of my project, using type selectors, class selectors and id selectors
 
 4. **Fetching Weather data using OpenWeather APIs**
-First I created the file **api_key.js**, and after creating my account through [OpenWeather] (https://openweathermap.org/) I copied my personal keys to make calls to the API to variables inside **api_key.js** to use them later 
+First I created the file **api_key.js**, and after creating my account through [OpenWeather](https://openweathermap.org/) I copied my personal keys to make calls to the API to variables inside **api_key.js** to use them later 
 
 5. **JavaScript**
 I created an **app.js** file and structured it in the following way:
