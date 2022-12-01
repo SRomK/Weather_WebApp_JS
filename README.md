@@ -28,14 +28,16 @@ I created an **app.js** file and structured it in the following way:
 - At the top of the file you will find all the **global variables** I needed to store the data I required (arrays, strings, JS Methods, JS object, Math.round function)
 - function checkDay() to check the day 
 - function dayAppears() to render the day through id selector when checkDay() is successfull
-- getDataForecast(apiUrl) implementing fetch with 
+- arrow function getDataForecast(apiUrl) implementing fetch with openWeather API and nested methods inside
+- arrow function getWeather() to get actual weather, implementing JS method to inject HTML after successfull fetch and a condition to cast getDataForecast fetch once getWeather()'s fetch has been successfull
+- Implemented an **addEventListener** to launch fetches and nested methods once the search button is clicked
 
 
 ## How to run the app:
 
-In order to run the app you will need to have [git] (https://git-scm.com/downloads) previously installed in your system/computer, choose a code editor of your choice and follow these steps:
+In order to run the app you will need to have [git](https://git-scm.com/downloads) previously installed in your system/computer, choose a code editor of your choice and follow these steps:
 
-* Copy URL of the [github project] (https://github.com/SRomK/Weather_WebApp_JS)
+* Copy URL of the [github project](https://github.com/SRomK/Weather_WebApp_JS)
 * Open VSCode or editor of your choice, select or create an empty folder to inject the project when cloned 
 * Open Terminal in VSCode
 * Run command **git clone** (repository url)
@@ -44,7 +46,7 @@ In order to run the app you will need to have [git] (https://git-scm.com/downloa
 
 ## Fast Visualization
 
-Just download all the files of the project to a local folder in your computer and launch the **index.html** file to open with your web browser (preferably **Chrome** (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)).
+Just download from this [Google Drive Link] all the files of the project to a local folder in your computer and launch the **index.html** file to open with your web browser (preferably **Chrome** (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)).
 
 ***********************************************************
 

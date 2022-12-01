@@ -35,8 +35,6 @@ const getDataForecast = (apiUrl) => {
 
             const onlyFiveDays = data.list.filter((item) => item.dt_txt.split(" ")[1] === afternoon);
             
-            // console.log({ onlyFiveDays })
-
             const printCard = onlyFiveDays.map((item, index) =>
                 `<div class="icons">
                 <p class="weather" id="day${index + 2}"></p>
@@ -71,7 +69,7 @@ const getWeather = () => {
         let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${api_key}&units=metric`;
 
         //Clear the input field
-        cityRef.value = ""; // quitar el value inicial
+        cityRef.value = ""; 
         fetch(api_url)
             .then((resp) => resp.json())
             //If city name is valid
@@ -97,9 +95,7 @@ const getWeather = () => {
               </div>
           </div>
           
-          `;    // DATA.COD ES EL CODIGO DE RESPUESTA DE LA API === 200 ES QUE LA RESPUESTA ES SATISFACTORIA DEL PRIMER FETCH
-                // PARA QUE SE EJECUTE EL SEGUNDO FETCH, COMO NECESITO DATOS DEL PRIMERO PARA LA URL, SOLO EJECUTARÉ EL SEGUNDO FETCH CUANDO
-                // EL COD DEL PRIMERO SEA SATISFACTORIO (200)
+          `;    
                 if (data.cod === 200) {
                     getDataForecast(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${api_forecast}`)
                 }

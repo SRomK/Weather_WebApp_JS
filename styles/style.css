@@ -169,7 +169,6 @@ button {
     color: var(--off-white);
 }
 
-
 /*forecast title*/
 
 #h1-forecast {
@@ -181,6 +180,11 @@ button {
 }
 
 /* forecast cards styles */
+
+p {
+    font-weight: 400;
+    color: var(--off-white);
+}
 
 .search-forecast-container {
     display: flex;
