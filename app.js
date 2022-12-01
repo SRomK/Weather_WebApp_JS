@@ -3,14 +3,10 @@ const searchBtn = document.getElementById("search-btn");
 const cityRef = document.getElementById("city-input");
 const cardContainer = document.getElementById("icons-container");
 const fiveDaysTitle = document.getElementById("h1-forecast");
+const RegExpression = /^[a-zA-Z\s]*$/;
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
 const afternoon = "12:00:00";
 const d = new Date();
-
-// console.log({ d })
-//const forecastContainer = document.getElementById("forecast");
-
-const RegExpression = /^[a-zA-Z\s]*$/;
 
 const roundedNum = (data) => Math.round(data);
 
@@ -118,7 +114,6 @@ const getWeather = () => {
                 if (data.cod === 200) {
                     getDataForecast(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${api_forecast}`)
                 }
-
 
             })
 
