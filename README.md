@@ -1,5 +1,6 @@
 **EN**
-# <img src="https://www.pngall.com/wp-content/uploads/11/Weather-PNG-Images.png" width="100" height="100">Technical Test - Weather WebApp
+# <img src="https://www.pngall.com/wp-content/uploads/11/Weather-PNG-Images.png" width="100" height="100">
+# Technical Test - Weather WebApp
 
 ## A functional project of a weather web app to search a city to get to know the actual weather and 5 days forecast
 
