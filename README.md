@@ -45,7 +45,13 @@ In order to run the app you will need to have [git](https://git-scm.com/download
 
 ## To run jest test 
 
-You will need clone the repo into an empty folder in your system, and with VSCode already opened with the respective project folders and files already injected in the empty folder, open a terminal and install jest with the command **npm i jest -D** and to run the test use the command **npm test utils.test.js**.
+You will need clone the repo into an empty folder in your system, and with VSCode already opened with the respective project folders and files already injected in the empty folder, open a terminal and install jest with the command:
+### `npm i jest -D`
+
+And to run the test use the command:
+
+### `npm test utils.test.js`
+
 
 **Note:** in case package.json file doesn't clone properly, the json file should include de script for testing, like this:
 
