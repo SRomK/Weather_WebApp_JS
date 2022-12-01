@@ -1,0 +1,9 @@
+{
+    "name": "WeatherWebApp",
+    "short_name": "Weather",
+    "theme_color": "#285c95",
+    "background_color": "#285c95",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/index.html"
+  }

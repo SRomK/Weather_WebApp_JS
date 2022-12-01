@@ -112,3 +112,8 @@ const getWeather = () => {
 
 searchBtn.addEventListener("click", getWeather);
 window.addEventListener("load", (getWeather) => console.log("Page fully loaded"));
+
+
+if(navigator.serviceWorker){
+    navigator.serviceWorker.register('./sw.js');
+}
