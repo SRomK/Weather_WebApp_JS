@@ -28,15 +28,18 @@ I created an **app.js** file and structured it in the following way:
 
 ## How to run the app:
 
-In order to run the app you will need to have [git] (https://git-scm.com/downloads) previously installed in your system/computer, also run the command ###npm install in your terminal to download required packages, choose a code editor of your choice and follow these steps:
+In order to run the app you will need to have [git] (https://git-scm.com/downloads) previously installed in your system/computer, choose a code editor of your choice and follow these steps:
 
 * Copy URL of the [github project] (https://github.com/SRomK/Weather_WebApp_JS)
 * Open VSCode or editor of your choice, select or create an empty folder to inject the project when cloned 
 * Open Terminal in VSCode
 * Run command **git clone** (repository url)
 * Install Live Server extension in VSCode to compile web app with the web browser of your choice (preferably **Chrome** (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop))
-* 
 
+
+## Fast Visualization
+
+Just download all the files of the project to a local folder in your computer and launch the **index.html** file to open with your web browser (preferably **Chrome** (https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)).
 
 ***********************************************************
 
