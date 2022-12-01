@@ -43,10 +43,24 @@ In order to run the app you will need to have [git](https://git-scm.com/download
 * Run command **git clone** (repository url)
 * Install Live Server extension in VSCode to compile web app with the web browser of your choice (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop))
 
+## To run jest test 
+
+You will need clone the repo into an empty folder in your system, and with VSCode already opened with the respective project folders and files already injected in the empty folder, open a terminal and install jest with the command **npm i jest -D** and to run the test use the command **npm test utils.test.js**.
+
+***Note: in case package.json file doesn't clone properly, the json file should include de script for testing, like this:
+`{
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}`
+
 
 ## Fast Visualization
 
-Just download from this [Google Drive Link](https://drive.google.com/drive/folders/1yTgq_FLXpR8ZTg6IUkz-ZG9FCsWw7xfM?usp=share_link) all the  project files to your computer and launch the **index.html** file to open with your web browser (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)).
+Just download from this [Google Drive Link](https://drive.google.com/drive/folders/1yTgq_FLXpR8ZTg6IUkz-ZG9FCsWw7xfM?usp=share_link) all the  project files to your computer and launch the **index.html** file to open with your web browser (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)). From green botton named `<CODE>`in the github repository, you can download the zip file.
 
 ***********************************************************
 
