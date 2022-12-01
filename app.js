@@ -65,16 +65,6 @@ const getDataForecast = (apiUrl) => {
             cardContainer.innerHTML = printCard
             dayAppears()
 
-            // for (let i = 0; i < 5; i++) {
-            //     document.getElementById("day" + (i + 1) + "Min").innerHTML = "Min: " + Math.round(Number(transformData[i].main.temp_min - 273.15)) + "°";
-            // }
-            // for (let i = 0; i < 5; i++) {
-            //     document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max: " + Math.round(Number(transformData[i].main.temp_max - 273.15)) + "°";
-            // }
-            // for (let i = 0; i < 5; i++) {
-            //     document.getElementById("img" + (i + 1)).src = "./img/icons/" + transformData[i].weather[0].icon + ".png";
-            // }
-            
         }) .catch((err) => {
             fiveDaysTitle.innerHTML = "";
             cardContainer.innerHTML = "";
@@ -100,8 +90,6 @@ const getWeather = () => {
         fetch(api_url)
             .then((resp) => resp.json())
             //If city name is valid
-
-            // evitar que muestre data inexistente --->> if(cityValue == data.name){ }
             .then((data) => {
                 result.innerHTML = `
           <div class="flex-wrapper"> 
@@ -134,7 +122,6 @@ const getWeather = () => {
 
             })
 
-
             .catch(() => {
                 result.innerHTML = `<h3 class="input-notvalid">City not found</h3>`;
                 cardContainer.innerHTML = "";
@@ -142,12 +129,6 @@ const getWeather = () => {
             });
     }
 };
-/*
-function defaultScreen(){
-    document.getElementById("city-input-forecast").defaultValue = "London";
-    getInfo();
-}*/
-
 
 searchBtn.addEventListener("click", getWeather);
 window.addEventListener("load", (getWeather) => console.log("Page fully loaded"));
