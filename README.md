@@ -40,10 +40,12 @@ In order to run the app you will need to have [git](https://git-scm.com/download
 * Copy URL of the [github project](https://github.com/SRomK/Weather_WebApp_JS)
 * Open VSCode or editor of your choice, select or create an empty folder to inject the project when cloned 
 * Open Terminal in VSCode
-* Run command **git clone** (repository url)
-* Install Live Server extension in VSCode to compile web app with the web browser of your choice (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop))
+* Run command:
+### `git clone` (repository url)
 
-## To run jest test 
+* Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode to compile web app with the web browser of your choice (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop))
+
+## To run JEST Test 
 
 You will need clone the repo into an empty folder in your system, and with VSCode already opened with the respective project folders and files already injected in the empty folder, open a terminal and install jest with the command:
 ### `npm i jest -D`
@@ -60,7 +62,8 @@ And to run the test use the command:
 
 ## Fast Visualization
 
-Just download from this [Google Drive Link](https://drive.google.com/drive/folders/1yTgq_FLXpR8ZTg6IUkz-ZG9FCsWw7xfM?usp=share_link) all the  project files to your computer and launch the **index.html** file to open with your web browser (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)). From green botton named `<CODE>`in the github repository, you can download the zip file.
+From green botton named `<CODE>`in the github repository, you can download a zip file of the project to a folder in your system and launch it from the **index.html** file.
+Or as an alternative download from this [Google Drive Link](https://drive.google.com/drive/folders/1yTgq_FLXpR8ZTg6IUkz-ZG9FCsWw7xfM?usp=share_link) all the  project files to your computer and launch the **index.html** file to open with your web browser (preferably [Chrome](https://support.google.com/chrome/answer/95346?hl=es&co=GENIE.Platform%3DDesktop)). 
 
 ***********************************************************
 
