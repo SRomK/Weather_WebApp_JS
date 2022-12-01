@@ -26,34 +26,23 @@ function dayAppears() {
 };
 
 const getDataForecast = (apiUrl) => {
+    
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
 
             fiveDaysTitle.innerHTML = `5 days weather forecast`;
 
-            const transformData = data.list.map((item) => {
-                // console.log({ dataAnteriorEntero: item.dt_txt })
-                // console.log({ DatoAnteriorConSplit: item.dt_txt.split(" ") })
-                // console.log({ DatoAnteriorConSplitMasCorchete1: item.dt_txt.split(" ")[1] })
-                return {
-                    ...item,
-                    dt_txt: item.dt_txt.split(" ")[1]
-                }
-            }
-            )
-            // console.log({ transformData })
-            const onlyFiveDays = transformData.filter((item) => item.dt_txt === afternoon)
-
+            const onlyFiveDays = data.list.filter((item) => item.dt_txt.split(" ")[1] === afternoon);
+            
             // console.log({ onlyFiveDays })
 
             const printCard = onlyFiveDays.map((item, index) =>
-                `   
-            <div class="icons">
+                `<div class="icons">
                 <p class="weather" id="day${index + 2}"></p>
-                <div class="icon-img">
-                    <img src="./img/icons/${item.weather[0].icon}.png" class="img-forecast" id="img5" alt="icon weather forecast">
-                </div>
+                    <div class="icon-img">
+                        <img src="./img/icons/${item.weather[0].icon}.png" class="img-forecast" id="img5" alt="icon weather forecast">
+                    </div>
                 <p class="minValues" id="day${index + 2}Min">Min: ${roundedNum(Number(item.main.temp_min - 273.15))}°</p>
                 <p class="maxValues" id="day${index + 2}Max">Max: ${roundedNum(Number(item.main.temp_max - 273.15))}°</p>
             </div>`
@@ -61,7 +50,7 @@ const getDataForecast = (apiUrl) => {
             cardContainer.innerHTML = printCard
             dayAppears()
 
-        }) .catch((err) => {
+        }).catch((err) => {
             fiveDaysTitle.innerHTML = "";
             cardContainer.innerHTML = "";
         });

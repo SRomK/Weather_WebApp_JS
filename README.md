@@ -24,7 +24,12 @@ First I created the file **api_key.js**, and after creating my account through O
 
 5. **JavaScript**
 I created an **app.js** file and structured it in the following way:
-- At the top of the file you will find all the **global variables** I needed to store the data I required 
+
+- At the top of the file you will find all the **global variables** I needed to store the data I required (arrays, strings, JS Methods, JS object, Math.round function)
+- function checkDay() to check the day 
+- function dayAppears() to render the day through id selector when checkDay() is successfull
+- getDataForecast(apiUrl) implementing fetch with 
+
 
 ## How to run the app:
 
