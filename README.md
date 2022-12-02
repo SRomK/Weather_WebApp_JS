@@ -20,7 +20,7 @@ Created **img** folder for the favicon icon and inside a separate folder with th
 
 3. **CSS**
 
-Created styles folder and inside it I created the specific **style.css** file with a universal selector with pseudo element specifications for the webapp window box-sizing specs, declared global variables to use within the css file and all the corresponding styles of my project, using type selectors, class selectors and id selectors
+Created styles folder and inside I created the specific **style.css** file containing initialy a universal selector with pseudo elements specifiying box-sizing and other properties for the webapp window. Also declared global variables to use within the css file and all the corresponding styles of my project, using type selectors, class selectors and id selectors
 
 4. **Fetching Weather data using OpenWeather APIs**
 
@@ -102,7 +102,7 @@ Cree la carpeta **img** para el icono favicon y dentro una carpeta separada con 
 
 3. **CSS**
 
-Cree la carpeta de estilos y dentro el fichero **style.css** indicando inicialmente con el selector universal y especificaciones con pseudo elementos para la window de la app Web y asignando el box-sizing. Tambien declare las variables globales para usar a lo largo del fichero css y todos los estilos correspondientes para mi proyecto, usando selectores de tipo type, class selectors y id selectors 
+Cree la carpeta de estilos y dentro el fichero **style.css** indicando inicialmente con el selector universal y pseudo elementos las especificaciones para la window de la app Web y asignado el box-sizing. Tambien declare las variables globales para usar a lo largo del fichero css y todos los estilos correspondientes para mi proyecto, usando selectores de tipo type, class selectors y id selectors 
 
 4. **Fetching Weather data usando OpenWeather APIs**
 
@@ -115,9 +115,9 @@ Cree la carpeta **js** y dentro el fichero **app.js** y lo organice de la siguie
 - Al principio del fichero declare todas mis **variables globales** que iba necesitando para guardar todo tipo de data que requeria(arrays, strings, JS Methods, JS object, Math.round function)
 - function **checkDay()** para verificar el dia 
 - function **dayAppears()** para renderizar cada dia utilizando el selector id cuando el getDataForecast fetch fuera exitoso y lanzar checkDay()
-- arrow function **getDataForecast(apiUrl)** implementando un fetch con la API de openWeather API y metodos anidados dentro
+- arrow function **getDataForecast(apiUrl)** implementando un fetch con la API de openWeather y metodos anidados dentro
 - arrow function **getWeather()** para obtener el clima actual, implementando metodos de JS para inyectar HTML despues de un fetch exitoso y una condicion para lanzar getDataForecast fetch una vez que el fetch de getWeather() haya sido exitoso
-- Luego de las funciones fetch implemente un **addEventListener** en el botón de busqueda para "activar" los fetch y que implementen contenido a traves de las llamadas exitosas a la API 
+- Luego de las funciones fetch implemente un **addEventListener** en el botón de busqueda para "activar" los fetch y que implementen contenido con la data inyectada a partir de las llamadas exitosas a la API 
 
 6. **Testing con JEST**
 
