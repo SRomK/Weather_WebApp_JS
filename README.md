@@ -1,4 +1,4 @@
-**EN**
+**EN** (spanish below)
 # <img src="https://www.pngall.com/wp-content/uploads/11/Weather-PNG-Images.png" width="100" height="100">
 # Technical Test - Weather WebApp
 
@@ -11,18 +11,23 @@ Here I go over each of the steps and technologies I used:
 
 
 1. **HTML**
+
 Created "index.html" file in project`s root and implemented basic html structure with semantic html tags to reinforce the meaning of the content and to improve SEO 
 
 2. **Images Folder**
+
 Created **img** folder for the favicon icon and inside a separate folder with the different weather icons
 
 3. **CSS**
+
 Created styles folder and inside it I created the specific **style.css** file with a universal selector with pseudo element specifications for the webapp window box-sizing specs, declared global variables to use within the css file and all the corresponding styles of my project, using type selectors, class selectors and id selectors
 
 4. **Fetching Weather data using OpenWeather APIs**
+
 First I created the file **api_key.js**, and after creating my account through [OpenWeather](https://openweathermap.org/) I copied my personal keys to make calls to the API to variables inside **api_key.js** to use them later 
 
 5. **JavaScript**
+
 I created an **app.js** file and structured it in the following way:
 
 - At the top of the file you will find all the **global variables** I needed to store the data I required (arrays, strings, JS Methods, JS object, Math.round function)
@@ -81,18 +86,23 @@ Pasos que seguí y tecnologías usadas:
 
 
 1. **HTML**
+
 Cree un fichero "index.html" en la raiz del proyecto e implemente la estructura html basica con etiquetas de html semantico para reforzar el significado del contenido de la app y por buenas practicas de cara a SEO
 
 2. **Images Folder**
+
 Cree la carpeta **img** para el icono favicon y dentro una carpeta separada con los distintos iconos para el cambio del clima
 
 3. **CSS**
+
 Cree la carpeta de estilos y dentro el fichero **style.css** indicando inicialmente con el selector universal y especificaciones con pseudo elementos para la window de la app Web y asignando el box-sizing. Tambien declare las variables globales para usar a lo largo del fichero css y todos los estilos correspondientes para mi proyecto, usando selectores de tipo type, class selectors y id selectors 
 
 4. **Fetching Weather data usando OpenWeather APIs**
+
 Primero cree un fichero con el nombre de **api_key.js**, y luego de crear mi cuenta a través de [OpenWeather](https://openweathermap.org/) copie mis keys personales y declare dos variables para guardar las keys allí y poder usarlas luego para llamar a la API
 
 5. **JavaScript**
+
 Cree la carpeta **js** y dentro el fichero **app.js** y lo organice de la siguiente manera:
 
 - Al principio del fichero declare todas mis **variables globales** que iba necesitando para guardar todo tipo de data que requeria(arrays, strings, JS Methods, JS object, Math.round function)
