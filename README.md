@@ -37,6 +37,9 @@ I created an **app.js** file and structured it in the following way:
 - arrow function **getWeather()** to get actual weather, implementing JS method to inject HTML after successfull fetch and a condition to cast getDataForecast fetch once getWeather()'s fetch has been successfull
 - Implemented an **addEventListener** to launch fetches and nested methods (injecting content in the app after a successful fetch) once the search button is clicked
 
+6. **Testing with JEST**
+
+After installing JEST, I created the file **utils.js** for the module.exports and then coded the tests inside the file **utils.test.js** for the roundedNum() function of my project. Tested it with **npm test utils.test.js** to check that my tests passed.
 
 ## How to run the app:
 
@@ -111,6 +114,10 @@ Cree la carpeta **js** y dentro el fichero **app.js** y lo organice de la siguie
 - arrow function **getDataForecast(apiUrl)** implementando un fetch con la API de openWeather API y metodos anidados dentro
 - arrow function **getWeather()** para obtener el clima actual, implementando metodos de JS para inyectar HTML despues de un fetch exitoso y una condicion para lanzar getDataForecast fetch una vez que el fetch de getWeather() haya sido exitoso
 - Luego de las funciones fetch implemente un **addEventListener** en el botón de busqueda para "activar" los fetch y que implementen contenido a traves de las llamadas exitosas a la API 
+
+6. **Testing con JEST**
+
+Despues de instalar JEST, cree el archivo **utils.js** para los module.exports y realice los tests dentro del fichero **utils.test.js** para la función roundedNum() de mi proyecto. Y los testie con **npm test utils.test.js** para verificar que los test fueran exitosos.
 
 
 ## Lanzar la app:
