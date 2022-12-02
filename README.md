@@ -41,6 +41,10 @@ I created an **app.js** file and structured it in the following way:
 
 After installing JEST, I created the file **utils.js** for the module.exports and then coded the tests inside the file **utils.test.js** for the roundedNum() function of my project. Tested it with **npm test utils.test.js** to check that my tests passed.
 
+6. **Service Worker**
+
+Installed a **Service Worker** in my project, since it's an specialized JavaScript asset that act as proxies between web browsers and web servers.
+
 ## How to run the app:
 
 In order to run the app, visualize the code and also run the test you will need to have [git](https://git-scm.com/downloads) previously installed in your system/computer, choose a code editor of your choice and follow these steps:
@@ -119,6 +123,9 @@ Cree la carpeta **js** y dentro el fichero **app.js** y lo organice de la siguie
 
 Despues de instalar JEST, cree el archivo **utils.js** para los module.exports y realice los tests dentro del fichero **utils.test.js** para la función roundedNum() de mi proyecto. Y los testie con **npm test utils.test.js** para verificar que los test fueran exitosos.
 
+6. **Service Worker**
+
+Instale un **Service Worker** en mi proyecto, ya que es un asset especializado de JavaScript que actua como proxy servers asentados entre las aplicaciones web, el navegador y la red (cuando está accesible).
 
 ## Lanzar la app:
 
